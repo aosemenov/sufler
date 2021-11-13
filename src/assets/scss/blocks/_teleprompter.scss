@@ -1,0 +1,13 @@
+.teleprompter {
+  &__settings {
+    display: flex;
+
+    &-block {
+      margin-right: rem($offset);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

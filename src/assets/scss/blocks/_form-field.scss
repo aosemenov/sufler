@@ -1,0 +1,29 @@
+.form-field {
+  &__label {
+
+  }
+
+  &__input {
+    font-family: $font-family;
+    font-size: rem($fontSizeS);
+
+    width: 100%;
+    padding: rem($offset-tiny) rem($offset-xs);
+
+    outline: none;
+
+    color: $medium-purple;
+    border: rem(1px) solid $blue-haze;
+    border-radius: rem(24px);
+    background-color: $white;
+
+    &:focus,
+    &:active {
+      border: rem(1px) solid $orange;
+    }
+  }
+
+  &--short {
+    max-width: rem(80px);
+  }
+}
