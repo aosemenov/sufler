@@ -1,13 +1,31 @@
 .teleprompter {
+  width: rem(650px);
+
+  &__textarea {
+    font-size: rem($font-size-base);
+    width: 100%;
+    max-height: rem(400px);
+    min-height: rem(400px);
+    padding: rem($offset-m);
+
+    resize: none;
+    outline: none;
+
+    border: rem(5px) dotted $melrose;
+    border-radius: rem($offset-m);
+    background-color: $snow;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
   &__settings {
     display: flex;
+    justify-content: space-between;
+  }
 
-    &-block {
-      margin-right: rem($offset);
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
+  &__window {
+    margin-bottom: rem($offset-m);
   }
 }

@@ -30,16 +30,24 @@
     border-radius: rem(24px);
     background-color: $white;
 
-    &:hover,
-    &:active {
+    &:hover:not(.is-disabled),
+    &:active:not(.is-disabled) {
       color: $white;
+      border: rem(1px) solid rgba($havelock-blue, .1);
       background-color: rgba($havelock-blue, .5);
+    }
+
+    &.is-disabled {
+      cursor: default;
+
+      color: $white;
+      border: rem(1px) solid rgba($gray, .0);
+      background-color: rgba($gray, .15);
     }
 
     &.is-active {
       color: $white;
-      border: rem(1px) solid $havelock-blue;
-      background: linear-gradient(90deg, $havelock-blue, #8F78ED);
+      background: $havelock-blue;
     }
   }
 }

@@ -1,6 +1,14 @@
 .form-field {
-  &__label {
+  position: relative;
 
+  &__label {
+    font-size: rem($fontSizeXS);
+
+    position: absolute;
+    top: rem(-18px); //magic num
+    left: rem(28px); //magic num
+
+    color: $medium-purple;
   }
 
   &__input {
@@ -24,6 +32,6 @@
   }
 
   &--short {
-    max-width: rem(80px);
+    max-width: rem(120px);
   }
 }
