@@ -1,13 +1,48 @@
 .teleprompter {
+  width: rem(650px);
+
+  &__textarea {
+    font-size: rem($font-size-base);
+    width: 100%;
+    height: rem(400px);
+
+    padding: rem($offset-m);
+
+    resize: none;
+    outline: none;
+
+    border: none;
+    background-color: $snow;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
   &__settings {
     display: flex;
+    justify-content: space-between;
 
-    &-block {
-      margin-right: rem($offset);
+    &-list {
+      display: flex;
+    }
 
-      &:last-of-type {
-        margin-right: 0;
+    &-item {
+      margin-right: rem($offset-tiny);
+
+      &:last-of-type{
+        margin: 0;
       }
     }
+  }
+
+  &__window {
+    overflow: hidden;
+
+    height: rem(400px);
+    margin-bottom: rem($offset-m);
+
+    border: rem($border-radius-default) dotted $melrose;
+    border-radius: rem($offset-m);
   }
 }
