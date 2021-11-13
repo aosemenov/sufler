@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
 
-  cursor: pointer;
   text-decoration: none;
 
   border: none;
@@ -30,14 +29,14 @@
     border-radius: rem(24px);
     background-color: $white;
 
-    &:hover:not(.is-disabled),
-    &:active:not(.is-disabled) {
+    &:hover:not([disabled="disabled"]),
+    &:active:not([disabled="disabled"]) {
       color: $white;
       border: rem(1px) solid rgba($havelock-blue, .1);
       background-color: rgba($havelock-blue, .5);
     }
 
-    &.is-disabled {
+    &[disabled="disabled"] {
       cursor: default;
 
       color: $white;
@@ -45,7 +44,7 @@
       background-color: rgba($gray, .15);
     }
 
-    &.is-active {
+    &.isActive {
       color: $white;
       background: $havelock-blue;
     }

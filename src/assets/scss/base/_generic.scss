@@ -17,5 +17,9 @@ html {
 }
 
 body {
+}
+
+#app {
+    font-family: $font-family;
     font-size: rem($font-size-base);
 }
